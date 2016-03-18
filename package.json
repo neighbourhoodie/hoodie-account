@@ -1,7 +1,7 @@
 {
   "name": "@hoodie/account",
   "version": "0.0.0-semantically-released",
-  "description": "Hoodie Account API and Client",
+  "description": "Hoodie Account API",
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {

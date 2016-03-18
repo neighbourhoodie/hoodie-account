@@ -2,7 +2,7 @@
 
 # hoodie-account
 
-> Hoodie's Account API and client
+> Hoodie's Account API
 
 ## License
 
