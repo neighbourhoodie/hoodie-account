@@ -1,0 +1,23 @@
+{
+  "name": "@hoodie/account",
+  "version": "0.0.0-semantically-released",
+  "description": "Hoodie Account API and Client",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoodiehq/hoodie-account.git"
+  },
+  "keywords": [
+    "hoodie",
+    "account"
+  ],
+  "author": "The Hoodie Community and other contributors | http://hood.ie/",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hoodiehq/hoodie-account/issues"
+  },
+  "homepage": "https://github.com/hoodiehq/hoodie-account#readme"
+}
