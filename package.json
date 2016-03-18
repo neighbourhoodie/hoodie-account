@@ -3,6 +3,7 @@
   "version": "0.0.0-semantically-released",
   "description": "Hoodie Account API and Client",
   "main": "server/index.js",
+  "browser": "client/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/hoodiehq/hoodie-account/issues"
   },
-  "homepage": "https://github.com/hoodiehq/hoodie-account#readme"
+  "homepage": "https://github.com/hoodiehq/hoodie-account#readme",
+  "dependencies": {
+    "hoodie-client-account": "^2.8.0",
+    "hoodie-server-account": "^2.6.14"
+  }
 }
