@@ -7,8 +7,8 @@
 ## Local setup and tests
 
 ```
-git clone git@github.com:hoodiehq/hoodie-store.git
-cd hoodie-store
+git clone git@github.com:hoodiehq/hoodie-account.git
+cd hoodie-account
 npm install
 npm test
 ```
