@@ -1,6 +1,7 @@
 # THIS IS WORK IN PROGRESS
 
 # hoodie-account
+[![Build Status](https://travis-ci.org/hoodiehq/hoodie-account.svg?branch=master)](https://travis-ci.org/hoodiehq/hoodie-account)
 
 > Hoodie's Account API
 
