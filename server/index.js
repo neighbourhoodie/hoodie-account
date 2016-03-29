@@ -1,1 +1,1 @@
-module.exports = require('hoodie-server-account')
+module.exports = require('@hoodie/account-server')

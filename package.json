@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/hoodiehq/hoodie-account#readme",
   "dependencies": {
-    "hoodie-client-account": "^2.8.0",
-    "hoodie-server-account": "^2.6.14"
+    "@hoodie/store-client": "5.0.0",
+    "@hoodie/store-server": "2.0.0"
   },
   "devDependencies": {
     "@gr2m/frontend-test-setup": "^1.2.1",
