@@ -20,12 +20,12 @@ function isError (value) {
 }
 
 describe('hoodie.account', function () {
-  this.timeout(2000)
+  this.timeout(30000)
 
   var username = 'user' + Math.random().toString(16).substr(2)
   var password = 'secret'
   var newUsername = username // username + 'new'
-  var newPassword = 'secret2' // 'secret2'
+  var newPassword = 'secret' // TODO: 'secret2'
   var accountId
   var accountEventNames = [
     'signin',
@@ -203,7 +203,7 @@ describe('hoodie.account', function () {
     })
   })
 
-  it.skip('.update({username: newUsername}) resolves with account properties\n      hoodiehq/hoodie-server-account#79', function () {
+  it.skip('.update({username: newUsername}) resolves with account properties\n      https://github.com/hoodiehq/hoodie-account-server/issues/79', function () {
     return this.client
 
     .executeAsync(function changePassword (newUsername, done) {
@@ -299,7 +299,7 @@ describe('hoodie.account', function () {
     })
   })
 
-  it.skip('.fetch with UnauthorizedError\n      hoodiehq/hoodie-server-account#81', function () {
+  it('.fetch with UnauthorizedError', function () {
     return this.client
 
     .executeAsync(function signIn (username, password, done) {
@@ -339,12 +339,17 @@ describe('hoodie.account', function () {
     .executeAsync(function fetch (done) {
       return hoodie.account.fetch()
 
-      .then(done, done)
+      .catch(function (error) {
+        done({
+          name: error.name,
+          message: error.message
+        })
+      })
     }).then(toValue)
 
     .catch(function (error) {
       expect(error.name).to.equal('UnauthorizedError')
-      expect(error.message).to.equal('Invalid credentials')
+      expect(error.message).to.equal('Session invalid')
     })
 
     .execute(function getEvents () {
@@ -356,16 +361,16 @@ describe('hoodie.account', function () {
     })
   })
 
-  it.skip('.isUnauthenticated()\n      hoodiehq/hoodie-server-account#81', function () {
+  it('.hasInvalidSession()', function () {
     return this.client
 
     .execute(function getIsUnauthenticated () {
-      return hoodie.account.isUnauthenticated()
+      return hoodie.account.hasInvalidSession()
     }).then(toValue)
     .should.eventually.equal(true)
   })
 
-  it.skip('.signIn() when unauthenticated\n      hoodiehq/hoodie-server-account#81', function () {
+  it('.signIn() when unauthenticated', function () {
     return this.client
 
     .executeAsync(function (username, password, done) {
@@ -373,8 +378,7 @@ describe('hoodie.account', function () {
         username: username,
         password: password
       })
-
-      .then(done, done)
+        .then(done, done)
     }, newUsername, newPassword)
 
     .execute(function getEvents () {
@@ -383,7 +387,7 @@ describe('hoodie.account', function () {
 
     .then(function (events) {
       expect(events.length).to.equal(1)
-      expect(events[1]).to.equal('reauthenticate')
+      expect(events[0]).to.equal('reauthenticate')
     })
   })
 })
