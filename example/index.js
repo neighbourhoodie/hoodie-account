@@ -35,7 +35,8 @@ db.installUsersBehavior().then(function () {
   server.register({
     register: hapiAccount,
     options: {
-      usersDb: db
+      usersDb: db,
+      secret: 'NOT SO SECRET'
     },
     routes: {
       prefix: '/hoodie/account/api'
