@@ -2,6 +2,9 @@
 
 # hoodie-account
 [![Build Status](https://travis-ci.org/hoodiehq/hoodie-account.svg?branch=master)](https://travis-ci.org/hoodiehq/hoodie-account)
+[![Dependency Status](https://david-dm.org/hoodiehq/hoodie-account.svg)](https://david-dm.org/hoodiehq/hoodie-account)
+[![devDependency Status](https://david-dm.org/hoodiehq/hoodie-account/dev-status.svg)](https://david-dm.org/hoodiehq/hoodie-account#info=devDependencies)
+
 
 > Hoodie's Account API
 
