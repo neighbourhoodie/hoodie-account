@@ -1,17 +1,17 @@
 {
   "name": "@hoodie/account",
-  "version": "0.0.0-semantically-released",
   "description": "Hoodie Account API",
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {
     "start": "node example",
     "pretest": "standard",
-    "test": "frontend-test-background mocha test/*.js"
+    "test": "frontend-test-background mocha test/*.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoodiehq/hoodie-account.git"
+    "url": "https://github.com/hoodiehq/hoodie-account.git"
   },
   "keywords": [
     "hoodie",
@@ -37,7 +37,8 @@
     "mocha": "^2.4.5",
     "pouchdb": "^5.3.0",
     "pouchdb-users": "^1.0.3",
-    "standard": "^6.0.8"
+    "standard": "^6.0.8",
+    "semantic-release": "^4.3.5"
   },
   "frontend-test-setup": {
     "server": {
