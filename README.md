@@ -24,7 +24,7 @@ Run the server:
 npm start
 ```
 
-After that go to `http://localhost::4663` in your browser.
+After that go to `http://localhost:4663` in your browser.
 
 ## License
 
