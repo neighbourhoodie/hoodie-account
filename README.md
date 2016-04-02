@@ -11,7 +11,7 @@
 ## Local setup and tests
 
 ```
-git clone git@github.com:hoodiehq/hoodie-account.git
+git clone https://github.com/hoodiehq/hoodie-account.git
 cd hoodie-account
 npm install
 npm test
