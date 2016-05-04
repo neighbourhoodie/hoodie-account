@@ -20,8 +20,8 @@
   "author": "The Hoodie Community and other contributors | http://hood.ie/",
   "license": "Apache-2.0",
   "publishConfig": {
-   "access": "public"
- },
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/hoodiehq/hoodie-account/issues"
   },
@@ -40,7 +40,7 @@
     "mocha": "^2.4.5",
     "pouchdb": "^5.3.0",
     "pouchdb-users": "^1.0.3",
-    "standard": "^6.0.8",
+    "standard": "^7.0.1",
     "semantic-release": "^4.3.5"
   },
   "frontend-test-setup": {
