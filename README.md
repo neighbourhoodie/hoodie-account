@@ -1,11 +1,14 @@
 # hoodie-account
 
-> Hoodie's Account API
+> Hoodie Account core module
 
 [![Build Status](https://travis-ci.org/hoodiehq/hoodie-account.svg?branch=master)](https://travis-ci.org/hoodiehq/hoodie-account)
 [![Dependency Status](https://david-dm.org/hoodiehq/hoodie-account.svg)](https://david-dm.org/hoodiehq/hoodie-account)
 [![devDependency Status](https://david-dm.org/hoodiehq/hoodie-account/dev-status.svg)](https://david-dm.org/hoodiehq/hoodie-account#info=devDependencies)
 
+`hoodie-account` combines [account-client](https://github.com/hoodiehq/hoodie-account-client),
+[account-server](https://github.com/hoodiehq/hoodie-account-server) and
+exposes a generic account UI.
 
 ## Local setup and tests
 
