@@ -10,24 +10,39 @@
 [account-server](https://github.com/hoodiehq/hoodie-account-server) and
 exposes a generic account UI.
 
-## Local setup and tests
+## Usage
 
-```
-git clone https://github.com/hoodiehq/hoodie-account.git
-cd hoodie-account
-npm install
-npm test
-```
-
-## Demo
-
-Run the server:
+Start the demo server
 
 ```
 npm start
 ```
 
-After that go to `http://localhost:4663` in your browser.
+If you want to use the account module as plugin of your [Hapi](http://hapijs.com/)
+server, check out [example/index.js](exmaple/index.js) to see how to register
+the [account-server](https://github.com/hoodiehq/hoodie-account-server) and how
+to bundle and server the [account-client](https://github.com/hoodiehq/hoodie-account-client)
+
+## Testing
+
+Local setup
+
+```
+git clone https://github.com/hoodiehq/hoodie-account.git
+cd hoodie-account
+npm install
+```
+
+Run end-to-end tests with selenium
+
+```
+npm test
+```
+
+## Contributing
+
+Have a look at the Hoodie project's [contribution guidelines](https://github.com/hoodiehq/hoodie/blob/master/CONTRIBUTING.md).
+If you want to hang out you can join our [Hoodie Community Chat](http://hood.ie/chat/).
 
 ## License
 
