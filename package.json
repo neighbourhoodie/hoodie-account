@@ -1,6 +1,6 @@
 {
   "name": "@hoodie/account",
-  "description": "Hoodie Account API",
+  "description": "Hoodie Account core module",
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {
