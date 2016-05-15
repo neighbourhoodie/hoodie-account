@@ -24,8 +24,8 @@ describe('hoodie.account', function () {
 
   var username = 'user' + Math.random().toString(16).substr(2)
   var password = 'secret'
-  var newUsername = username // username + 'new'
-  var newPassword = 'secret' // TODO: 'secret2'
+  var newUsername = username + 'new'
+  var newPassword = 'secret2'
   var accountId
   var accountEventNames = [
     'signin',
@@ -185,13 +185,12 @@ describe('hoodie.account', function () {
   it('.update({password: newPassword}) resolves with account properties', function () {
     return this.client
 
-    .executeAsync(function changePassword (username, newPassword, done) {
+    .executeAsync(function changePassword (newPassword, done) {
       hoodie.account.update({
-        username: username, // username should not be required: hoodiehq/hoodie-client-account#75
         password: newPassword
       })
       .then(done, done)
-    }, username, newPassword).then(toValue)
+    }, newPassword).then(toValue)
     .should.eventually.have.property('username', username)
 
     .execute(function getEvents () {
@@ -203,7 +202,7 @@ describe('hoodie.account', function () {
     })
   })
 
-  it.skip('.update({username: newUsername}) resolves with account properties\n      https://github.com/hoodiehq/hoodie-account-server/issues/79', function () {
+  it('.update({username: newUsername}) resolves with account properties', function () {
     return this.client
 
     .executeAsync(function changePassword (newUsername, done) {
@@ -212,18 +211,25 @@ describe('hoodie.account', function () {
       })
       .then(done, done)
     }, newUsername).then(toValue)
-    .should.eventually.have.property('username', username)
+    .should.eventually.have.property('username', newUsername)
+
+    // .executeAsync(function fetch (done) {
+    //   hoodie.account.fetch().then(done, done)
+    // }).then(toValue)
+    // .then(function (account) {
+    //   expect(account.username).to.equal('username')
+    // })
   })
 
   it('.signOut() resolves with account properties', function () {
     return this.client
 
     // sets isSignedIn
-    .executeAsync(function signOut (username, done) {
+    .executeAsync(function signOut (done) {
       hoodie.account.signOut()
 
       .then(done, done)
-    }, newUsername).then(toValue)
+    }).then(toValue)
     .should.eventually.have.property('username', newUsername)
 
     .execute(function getEvents () {
@@ -275,7 +281,7 @@ describe('hoodie.account', function () {
 
       .then(done, done)
     }, newUsername, newPassword).then(toValue)
-    .should.eventually.have.property('username', username)
+    .should.eventually.have.property('username', newUsername)
 
     .execute(function getEvents () {
       return window.accountEvents
@@ -379,7 +385,7 @@ describe('hoodie.account', function () {
         password: password
       })
         .then(done, done)
-    }, newUsername, newPassword)
+    }, username, password)
 
     .execute(function getEvents () {
       return window.accountEvents
