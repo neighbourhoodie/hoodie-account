@@ -326,10 +326,11 @@ describe('hoodie.account', function () {
 
     // simulate an invalid session by changing the session id in localStorage
     // and reloading the page
-    .execute(function simulateUnauthenticatedState () {
+    .executeAsync(function simulateUnauthenticatedState (done) {
       var account = JSON.parse(window.localStorage.getItem('account'))
       account.session.id = 'invalidsessionid'
       window.localStorage.setItem('account', JSON.stringify(account))
+      window.setTimeout(done, 100)
     })
     .url('/')
     .execute(function (accountEventNames) {
