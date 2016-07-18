@@ -213,12 +213,57 @@ describe('hoodie.account', function () {
     }, newUsername).then(toValue)
     .should.eventually.have.property('username', newUsername)
 
-    // .executeAsync(function fetch (done) {
-    //   hoodie.account.fetch().then(done, done)
-    // }).then(toValue)
-    // .then(function (account) {
-    //   expect(account.username).to.equal('username')
-    // })
+    .execute(function getEvents () {
+      return window.accountEvents
+    }).then(toValue)
+    .then(function (events) {
+      expect(events.length).to.equal(1)
+      expect(events[0]).to.equal('update')
+    })
+  })
+
+  it.skip('.update({foo: "bar"}) rejects with forbidden error (hoodie-account#40)', function () {
+    return this.client
+
+    .executeAsync(function fetch (done) {
+      hoodie.account.update({foo: 'bar'}).then(done, done)
+    }).then(toValue)
+    .catch(function (error) {
+      expect(error.name).to.equal('ForbiddenError')
+    })
+  })
+
+  it.skip('.fetch() resolves with account properties (hoodie-account#37)', function () {
+    return this.client
+
+    .executeAsync(function fetch (done) {
+      hoodie.account.fetch().then(done, done)
+    }).then(toValue)
+    .then(function (account) {
+      expect(account.username).to.equal(newUsername)
+    })
+  })
+
+  it.skip('.profile.update() resolves with profile properties (hoodie-account#38)', function () {
+    return this.client
+
+    .executeAsync(function fetch (done) {
+      hoodie.account.profile.update({foo: 'bar'}).then(done, done)
+    }).then(toValue)
+    .then(function (profile) {
+      expect(profile.foo).to.equal('bar')
+    })
+  })
+
+  it.skip('.profile.fetch() resolves with profile properties (hoodie-account#39)', function () {
+    return this.client
+
+    .executeAsync(function fetch (done) {
+      hoodie.account.fetch().then(done, done)
+    }).then(toValue)
+    .then(function (profile) {
+      expect(profile).to.deep.equal({})
+    })
   })
 
   it('.signOut() resolves with account properties', function () {
