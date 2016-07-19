@@ -233,7 +233,7 @@ describe('hoodie.account', function () {
     })
   })
 
-  it.skip('.fetch() resolves with account properties (hoodie-account#37)', function () {
+  it('.fetch() resolves with account properties', function () {
     return this.client
 
     .executeAsync(function fetch (done) {
@@ -241,28 +241,30 @@ describe('hoodie.account', function () {
     }).then(toValue)
     .then(function (account) {
       expect(account.username).to.equal(newUsername)
+      expect(account.id).to.match(/^\w+$/)
+      expect(Object.keys(account).sort()).to.deep.equal(['id', 'username'])
     })
   })
 
-  it.skip('.profile.update() resolves with profile properties (hoodie-account#38)', function () {
+  it('.profile.update() resolves with profile properties', function () {
     return this.client
 
     .executeAsync(function fetch (done) {
       hoodie.account.profile.update({foo: 'bar'}).then(done, done)
     }).then(toValue)
     .then(function (profile) {
-      expect(profile.foo).to.equal('bar')
+      expect(profile).to.deep.equal({foo: 'bar'})
     })
   })
 
-  it.skip('.profile.fetch() resolves with profile properties (hoodie-account#39)', function () {
+  it('.profile.fetch() resolves with profile properties', function () {
     return this.client
 
     .executeAsync(function fetch (done) {
-      hoodie.account.fetch().then(done, done)
+      hoodie.account.profile.fetch().then(done, done)
     }).then(toValue)
     .then(function (profile) {
-      expect(profile).to.deep.equal({})
+      expect(profile).to.deep.equal({foo: 'bar'})
     })
   })
 
