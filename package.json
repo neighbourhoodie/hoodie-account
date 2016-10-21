@@ -29,7 +29,7 @@
   "homepage": "https://github.com/hoodiehq/hoodie-account#readme",
   "dependencies": {
     "@hoodie/account-client": "^4.0.3",
-    "@hoodie/account-server": "^4.0.0"
+    "@hoodie/account-server": "^5.1.2"
   },
   "devDependencies": {
     "@gr2m/frontend-test-setup": "^1.2.1",
