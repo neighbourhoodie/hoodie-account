@@ -43,7 +43,7 @@
     "pouchdb": "^6.0.4",
     "pouchdb-users": "^1.0.3",
     "semantic-release": "^4.3.5",
-    "standard": "^8.2.0"
+    "standard": "8.4.0"
   },
   "frontend-test-setup": {
     "server": {
