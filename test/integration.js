@@ -242,7 +242,7 @@ describe('hoodie.account', function () {
     .then(function (account) {
       expect(account.username).to.equal(newUsername)
       expect(account.id).to.match(/^\w+$/)
-      expect(Object.keys(account).sort()).to.deep.equal(['id', 'username'])
+      expect(Object.keys(account).sort()).to.deep.equal(['craetedAt', 'id', 'signedUpAt', 'username'])
     })
   })
 
