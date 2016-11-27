@@ -57,17 +57,25 @@ server.route({
 
 server.register(inert, function (err) {
   if (err) throw err
-})
 
-server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply.file(path.join(__dirname, '..', 'public', 'index.html'))
-  }
-})
+  server.route({
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+      reply.file(path.join(__dirname, '..', 'public', 'index.html'))
+    }
+  })
 
-server.start(function (err) {
-  if (err) throw err
-  console.log('Server running at %s', server.info.uri)
+  server.route({
+    method: 'GET',
+    path: '/{p*}',
+    handler: function (request, reply) {
+      reply.file(path.join(__dirname, '..', 'public', request.params.p))
+    }
+  })
+
+  server.start(function (err) {
+    if (err) throw err
+    console.log('Server running at %s', server.info.uri)
+  })
 })
