@@ -41,7 +41,7 @@
     "memdown": "^1.1.2",
     "mocha": "^3.0.0",
     "pouchdb-adapter-memory": "^6.0.7",
-    "pouchdb-core": "^6.0.7",
+    "pouchdb-core": "^6.1.0",
     "pouchdb-mapreduce": "^6.0.7",
     "semantic-release": "^6.3.2",
     "standard": "^8.2.0"
