@@ -39,7 +39,7 @@
     "hapi": "^16.0.0",
     "inert": "^4.0.0",
     "memdown": "^1.1.2",
-    "mocha": "^3.0.0",
+    "mocha": "^3.4.0",
     "pouchdb-adapter-memory": "^6.0.7",
     "pouchdb-core": "^6.0.7",
     "pouchdb-mapreduce": "^6.0.7",
