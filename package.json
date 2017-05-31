@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/hoodiehq/hoodie-account#readme",
   "dependencies": {
-    "@hoodie/account-client": "^5.1.0",
+    "@hoodie/account-client": "^6.0.2",
     "@hoodie/account-server": "^6.0.4"
   },
   "devDependencies": {
