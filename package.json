@@ -35,7 +35,7 @@
     "@gr2m/frontend-test-setup": "^1.2.1",
     "browserify": "^14.1.0",
     "chai": "^4.1.0",
-    "greenkeeper-postpublish": "^1.0.0",
+    "greenkeeper-postpublish": "^1.1.0",
     "hapi": "^16.0.0",
     "inert": "^4.0.0",
     "memdown": "^1.1.2",
