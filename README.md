@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/hoodiehq/hoodie-account.svg?branch=master)](https://travis-ci.org/hoodiehq/hoodie-account)
 [![Dependency Status](https://david-dm.org/hoodiehq/hoodie-account.svg)](https://david-dm.org/hoodiehq/hoodie-account)
-[![devDependency Status](https://david-dm.org/hoodiehq/hoodie-account/dev-status.svg)](https://david-dm.org/hoodiehq/hoodie-account#info=devDependencies)
+[![devDependency Status](https://david-dm.org/hoodiehq/hoodie-account/dev-status.svg)](https://david-dm.org/hoodiehq/hoodie-account#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/neighbourhoodie/hoodie-account.svg)](https://greenkeeper.io/)
 
 `hoodie-account` combines [account-client](https://github.com/hoodiehq/hoodie-account-client),
 [account-server](https://github.com/hoodiehq/hoodie-account-server) and
