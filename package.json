@@ -28,23 +28,23 @@
   },
   "homepage": "https://github.com/hoodiehq/hoodie-account#readme",
   "dependencies": {
-    "@hoodie/account-client": "^5.1.0",
+    "@hoodie/account-client": "^6.0.3",
     "@hoodie/account-server": "^6.0.4"
   },
   "devDependencies": {
     "@gr2m/frontend-test-setup": "^1.2.1",
-    "browserify": "^14.1.0",
+    "browserify": "^16.2.2",
     "chai": "^4.1.0",
     "greenkeeper-postpublish": "^1.0.0",
-    "hapi": "^16.0.0",
-    "inert": "^4.0.0",
-    "memdown": "^1.1.2",
-    "mocha": "^3.0.0",
+    "hapi": "^17.5.0",
+    "inert": "^5.1.0",
+    "memdown": "^2.0.0",
+    "mocha": "^5.2.0",
     "pouchdb-adapter-memory": "^6.0.7",
     "pouchdb-core": "^6.0.7",
     "pouchdb-mapreduce": "^6.0.7",
-    "semantic-release": "^6.3.2",
-    "standard": "^10.0.0"
+    "semantic-release": "^15.5.0",
+    "standard": "^11.0.1"
   },
   "frontend-test-setup": {
     "server": {
